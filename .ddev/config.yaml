@@ -316,4 +316,6 @@ web_extra_exposed_ports:
 # See https://ddev.readthedocs.io/en/stable/users/extend/custom-commands/ for more
 # information on the commands that can be extended and the tasks you can define
 # for them. Example:
-#hooks:
+hooks:
+  post-start:
+    - exec-host: "sleep 5 && google-chrome https://n8n-deepseek.ddev.site:5679"
